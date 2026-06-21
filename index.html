@@ -141,6 +141,12 @@
   .panel-block .edu-entry .sch{ font-size:13px; color:var(--ink-faint); font-family:var(--sans); }
   .edu-doclink{ display:inline-block; font-family:var(--sans); font-size:11px; font-weight:600; color:var(--navy); margin-top:6px; padding-bottom:1px; border-bottom:1px solid var(--gold); }
   .edu-doclink:hover{ color:var(--gold); }
+  .course-group{ margin-bottom:14px; }
+  .course-group:last-child{ margin-bottom:0; }
+  .course-group-label{ font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); margin-bottom:7px; }
+  .course-chips{ display:flex; flex-wrap:wrap; gap:6px; }
+  .course-chip{ font-family:var(--sans); font-size:11px; color:var(--ink-dim); background:var(--bg-soft); border:1px solid var(--line); padding:4px 9px; line-height:1.3; }
+  .course-chip .code{ color:var(--navy); font-weight:600; margin-right:4px; }
 
   /* ---------- projects (CV list style) ---------- */
   .project-entry{ display:grid; grid-template-columns:150px 1fr; gap:36px; padding:38px 0; border-bottom:1px solid var(--line); }
@@ -335,6 +341,68 @@
             <div class="edu-badge">
               <img src="assets/images/duke-badge.jpg" alt="Duke Engineering — Robotics &amp; Autonomy">
               <div class="edu-badge-text"><strong>Admitted, Fall 2026</strong>Pratt School of Engineering, M.Eng. in Robotics &amp; Autonomy</div>
+            </div>
+          </div>
+          <div class="panel-block">
+            <h4>Coursework <span style="color:var(--ink-faint); font-weight:400; text-transform:none; letter-spacing:0; font-size:10.5px;">— Undergraduate, B.S. Mech. Eng. (graduate coursework added separately)</span></h4>
+
+            <div class="course-group">
+              <div class="course-group-label">Math &amp; Statistics</div>
+              <div class="course-chips">
+                <span class="course-chip"><span class="code">MATH 1413</span>Precalculus</span>
+                <span class="course-chip"><span class="code">MAC 2311C</span>Calculus I</span>
+                <span class="course-chip"><span class="code">MAC 2312</span>Calculus II</span>
+                <span class="course-chip"><span class="code">MAC 2313</span>Calculus III</span>
+                <span class="course-chip"><span class="code">MAP 2302</span>Ordinary Differential Equations I</span>
+                <span class="course-chip"><span class="code">STA 3032</span>Probability &amp; Statistics for Engineers</span>
+              </div>
+            </div>
+
+            <div class="course-group">
+              <div class="course-group-label">Physics</div>
+              <div class="course-chips">
+                <span class="course-chip"><span class="code">PHYS 2533/253L</span>General Physics I + Lab</span>
+                <span class="course-chip"><span class="code">PHY 2048C</span>General Physics I, Calculus-Based (Studio)</span>
+                <span class="course-chip"><span class="code">PHY 2049C</span>General Physics II, Calculus-Based (Studio)</span>
+              </div>
+            </div>
+
+            <div class="course-group">
+              <div class="course-group-label">Engineering Core</div>
+              <div class="course-chips">
+                <span class="course-chip"><span class="code">EGS 1006C</span>Intro to the Engineering Profession</span>
+                <span class="course-chip"><span class="code">EGN 1007C</span>Engineering Concepts &amp; Methods</span>
+                <span class="course-chip"><span class="code">EGN 3310</span>Engineering Analysis: Statics</span>
+                <span class="course-chip"><span class="code">EGN 3321</span>Engineering Analysis: Dynamics</span>
+                <span class="course-chip"><span class="code">EGM 3601</span>Solid Mechanics</span>
+                <span class="course-chip"><span class="code">EGN 3365</span>Structure &amp; Properties of Materials (Materials Science)</span>
+                <span class="course-chip"><span class="code">EGN 3343</span>Thermodynamics</span>
+                <span class="course-chip"><span class="code">EGN 3373</span>Principles of Electrical Engineering</span>
+                <span class="course-chip"><span class="code">EML 3701</span>Fluid Mechanics I</span>
+                <span class="course-chip"><span class="code">EML 4142</span>Heat Transfer</span>
+                <span class="course-chip"><span class="code">EML 4143</span>Heat Transfer II</span>
+                <span class="course-chip"><span class="code">EML 3034C</span>Modeling Methods in Mechanical Engineering</span>
+                <span class="course-chip"><span class="code">EML 3303C</span>Mechanical Engineering Measurements</span>
+                <span class="course-chip"><span class="code">EML 3500</span>Design &amp; Analysis of Machine Components I</span>
+                <span class="course-chip"><span class="code">EML 4504</span>Design &amp; Analysis of Machine Components II</span>
+                <span class="course-chip"><span class="code">EML 4225</span>Intro to Vibrations &amp; Controls</span>
+                <span class="course-chip"><span class="code">EML 3811C</span>Mechatronics</span>
+                <span class="course-chip"><span class="code">EML 3022C</span>Intro to CAE</span>
+                <span class="course-chip"><span class="code">EGN 4060C</span>Introduction to Robotics</span>
+                <span class="course-chip"><span class="code">EML 4024C</span>Engineering Design Practice (CAD/SolidWorks, FEA)</span>
+                <span class="course-chip"><span class="code">EML 4301C</span>Mechanical Systems Lab</span>
+                <span class="course-chip"><span class="code">EML 4501C</span>Engineering Design I — Senior Design</span>
+                <span class="course-chip"><span class="code">EML 4502C</span>Engineering Design II — Senior Design</span>
+                <span class="course-chip"><span class="code">BME 3891</span>Fundamentals of Rehabilitation Engineering</span>
+              </div>
+            </div>
+
+            <div class="course-group">
+              <div class="course-group-label">Programming</div>
+              <div class="course-chips">
+                <span class="course-chip"><span class="code">COP 2500C</span>Concepts in Computer Science</span>
+                <span class="course-chip"><span class="code">COP 3223C</span>Intro to Programming with C</span>
+              </div>
             </div>
           </div>
           <div class="panel-block">
