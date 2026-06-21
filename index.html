@@ -113,13 +113,6 @@
   .btn-ghost{ color:var(--navy); border:1px solid var(--line-strong); }
   .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); }
 
-  .stats-strip{ display:flex; max-width:560px; }
-  .stat{ flex:1; padding-right:24px; border-right:1px solid var(--line); }
-  .stat:not(:first-child){ padding-left:24px; }
-  .stat:last-child{ border-right:none; }
-  .stat .num{ font-family:var(--display); font-size:25px; color:var(--navy); }
-  .stat .label{ font-family:var(--sans); font-size:10.5px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.05em; margin-top:6px; line-height:1.5; }
-
   .portrait-frame{ border:1px solid var(--navy); padding:9px; position:relative; z-index:1; }
   .portrait-frame-inner{ border:1px solid var(--gold); overflow:hidden; aspect-ratio:4/5; }
   .portrait-frame-inner img{ width:100%; height:100%; object-fit:cover; object-position:center 20%; }
@@ -218,7 +211,7 @@
   .resume-fallback{ display:none; padding:60px 20px; text-align:center; font-family:var(--sans); font-size:13px; color:var(--ink-dim); }
 
   /* ---------- contact ---------- */
-  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1px; max-width:760px; margin:0 auto; background:var(--line); border:1px solid var(--line); }
+  .contact-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; max-width:760px; margin:0 auto; background:var(--line); border:1px solid var(--line); }
   .contact-card{ background:var(--bg); padding:30px 28px; transition:background .2s; }
   .contact-card:hover{ background:var(--bg-soft); }
   .contact-card .cc-label{ font-family:var(--sans); font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-faint); margin-bottom:10px; }
@@ -298,24 +291,19 @@
     <div>
       <div class="eyebrow">Robotics &amp; Mechanical Engineering</div>
       <h1>Kevin Rivera</h1>
-      <div class="subtitle">M.Eng. Candidate, Robotics &amp; Autonomy — Duke University</div>
+      <div class="subtitle">Incoming M.Eng. Student, Robotics &amp; Autonomy — Duke University</div>
       <div class="subtitle2">B.S. Mechanical Engineering · University of Central Florida</div>
-      <p class="intro">I build the vision, control, and mechanical systems that let machines act precisely in the physical world — from a sub-millimeter depth-sensing pipeline for an agricultural robot to a fully animatronic museum exhibit. I like problems where the constraint is physical, and being right to a tenth of a millimeter actually matters.</p>
+      <p class="intro">I build vision, control, and mechanical systems that enable machines to operate precisely in the physical world, from a sub-millimeter depth-sensing pipeline for an agricultural robot to a fully animatronic museum exhibit prototype. I'm drawn to problems where physical constraints matter and precision down to a tenth of a millimeter makes a real difference. I'm motivated by challenging problems that reward first-principles thinking, intellectual rigor, and fast iteration.</p>
       <div class="btn-row">
         <a href="#projects" class="btn btn-primary">View Projects</a>
         <a href="#resume" class="btn btn-ghost">Download Résumé</a>
-      </div>
-      <div class="stats-strip">
-        <div class="stat"><div class="num">0.443mm</div><div class="label">RMS Depth Accuracy</div></div>
-        <div class="stat"><div class="num">3.51</div><div class="label">GPA, B.S. Mech. Eng.</div></div>
-        <div class="stat"><div class="num">10 hrs/wk</div><div class="label">Lab Research</div></div>
       </div>
     </div>
     <div>
       <div class="portrait-frame">
         <div class="portrait-frame-inner"><img src="assets/images/headshot.jpg" alt="Kevin Rivera" style="object-position:center 30%;"></div>
       </div>
-      <div class="portrait-cap">Orlando, FL · Durham, NC</div>
+      <div class="portrait-cap">Orlando, FL · Durham, NC · Mayagüez, PR</div>
     </div>
   </div>
 </section>
@@ -325,20 +313,24 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow">About</div>
-      <h2>From mechanical engineering<br>to machines that decide</h2>
+      <h2>Turning Ideas Into Working Systems</h2>
     </div>
     <div class="about-grid">
       <div class="reveal">
-        <p>I started in mechanical engineering at UCF because I wanted to build things that move. I'm finishing it in a robotics lab, writing the vision pipeline that tells a strawberry-harvesting robot exactly how far away a strawberry is — <strong>without a single neural network.</strong></p>
-        <p>In August 2026 I began my M.Eng. in Robotics &amp; Autonomy at Duke, working on a harder version of the same problem: how do you get a machine to perceive, decide, and act in the real world, reliably, with no one there to correct its mistakes?</p>
-        <p>Outside research, I build things to find out if I can — an automated chessboard that mirrors your online games with a gantry and an electromagnet, or an animatronic Stegosaurus engineered for a children's museum. Both are the same question in disguise: how do you turn an abstract decision into precise physical motion?</p>
-        <p>I've also spent the last two years running U.S. operations for a 1,000-plus member national nonprofit, and interned in cost engineering on infrastructure projects across Central Florida. I like operating problems almost as much as I like robots.</p>
+        <p>I began my mechanical engineering studies at UCF with a broad interest in building physical systems, without a defined specialization. Early on, I gained exposure to structured engineering workflows through research in materials science in the Dr. Sohn Research Group. There, I learned foundational lab practices—how to document experiments, prepare and test 3D-printed samples, collect and organize data, and follow repeatable procedures used in engineering research environments. This experience gave me my first understanding of basic research discipline and experimental work.</p>
+        <p>At the same time, I worked as an estimating intern in construction engineering, supporting cost analysis and infrastructure projects under predefined deliverables and established industry processes. These early roles grounded my understanding of engineering as structured, process-driven work.</p>
+        <p>A shift in direction came through a mechatronics course, where mechanical systems, electronics, and computation were treated as a unified system. For the first time, I was working on problems where system behavior emerged from the interaction of hardware and software. This is where I became interested in robotics as a discipline.</p>
+        <p>I then joined the Dr. Xu Agricultural Robotics Lab at UCF, where I work on a real-time computer vision system for distance estimation in a strawberry-harvesting robot. The project focuses on classical, non-neural methods using dual RGB cameras, along with experimental validation using custom test setups designed in SolidWorks. I also support embedded system integration and serve as a communication point with the lab lead for progress updates and technical coordination.</p>
+        <p>In parallel, I became involved in Phi Eta Mu, a fraternity that operates primarily in Spanish. At the start, I had limited fluency, so I learned Spanish throughout the initiation process in order to fully participate. Over time, I progressed into leadership roles as Secretary and later Canciller of a 40-member chapter, where I helped manage operations, maintain records, coordinate meetings, and support financial and administrative reporting. I also contributed to the development of cross-chapter events and initiatives to strengthen alumni and member engagement, including the creation of a professional networking group to support long-term connections.</p>
+        <p>Outside of lab and organizational work, I have continued to build systems through hands-on engineering projects, including an animatronic robotic system developed in collaboration with the Lawrence Hall of Science at UC Berkeley. The project integrates mechanical design, embedded control, and system-level coordination to create a fully functional interactive exhibit prototype.</p>
+        <p>Across these experiences, I have developed a more deliberate approach to engineering—starting from system behavior, breaking problems into interacting components, and iterating through design, implementation, and testing. I am now drawn to robotics because it sits at the intersection of these domains, where success depends on both technical correctness and system-level integration.</p>
+        <p>I am pursuing graduate study in Robotics &amp; Autonomy to continue developing in this direction, working on systems where perception, computation, and actuation must all align under real-world constraints.</p>
       </div>
       <div class="reveal">
         <div class="panel">
           <div class="panel-block">
             <h4>Education</h4>
-            <div class="edu-entry"><div class="deg">M.Eng., Robotics &amp; Autonomy</div><div class="sch">Duke University · 2026–Present</div></div>
+            <div class="edu-entry"><div class="deg">M.Eng., Robotics &amp; Autonomy</div><div class="sch">Duke University · Incoming, Fall 2026</div></div>
             <div class="edu-entry"><div class="deg">B.S., Mechanical Engineering</div><div class="sch">University of Central Florida · 2022–2026 · GPA 3.51</div></div>
             <a href="assets/resume/Kevin_Rivera_UCF_Diploma.pdf" target="_blank" rel="noopener" class="edu-doclink">View Diploma (PDF) →</a>
             <div class="edu-badge">
@@ -356,7 +348,7 @@
           </div>
           <div class="panel-block">
             <h4>Hardware &amp; Lab</h4>
-            <p class="plain">Raspberry Pi · Arduino · ESP32 · Stepper &amp; gantry systems · SEM / XRD · SLM 3D printing</p>
+            <p class="plain">Raspberry Pi · Arduino · ESP32 · Stepper &amp; gantry systems · SEM / XRD · SLM 3D printing · FDM 3D Printing · OrcaSlicer</p>
           </div>
           <div class="panel-block">
             <h4>Languages</h4>
@@ -379,62 +371,17 @@
 
     <div class="reveal project-entry no-date">
       <div>
-        <div class="pe-title">Wizardry Chess</div>
-        <div class="pe-org">Team Project — with Ricardo Metral &amp; Max Eiken</div>
-        <p class="pe-desc">A physical chessboard that plays your online games for you. A Raspberry Pi pulls live game state from the Lichess API, translates each move into X–Y coordinates, and drives a custom gantry and electromagnet to move the correct piece in real time on a laser-cut wooden board.</p>
-        <div class="pe-stat">Built a "Loyalty Mechanic": blunder too many moves under live engine analysis, and your own pieces begin making random legal moves instead of yours.</div>
-        <div class="pe-tags"><span>Raspberry Pi</span><span>ROS2</span><span>Lichess API</span><span>Stepper Motors</span><span>Electromagnet Actuation</span></div>
-
-        <div class="doc-library">
-          <div class="doc-library-head">Project Documents — 2 Files</div>
-
-          <div class="doc-row">
-            <div class="doc-row-main">
-              <div class="doc-badge">PDF</div>
-              <div class="doc-info">
-                <div class="doc-title">Final Report</div>
-                <div class="doc-meta">Full system writeup — gantry &amp; electromagnet design, software architecture, API integration, and the Loyalty Mechanic</div>
-              </div>
-              <div class="doc-actions">
-                <button class="doc-btn primary" onclick="toggleDoc('wcreport','assets/projects/wizardry-chess/Wizardry_Chess_Final_Report.pdf','pdf',this)">View</button>
-                <a class="doc-btn" href="assets/projects/wizardry-chess/Wizardry_Chess_Final_Report.pdf" download>Download</a>
-              </div>
-            </div>
-            <div class="doc-panel" id="panel-wcreport"></div>
-          </div>
-
-          <div class="doc-row">
-            <div class="doc-row-main">
-              <div class="doc-badge">SLIDES</div>
-              <div class="doc-info">
-                <div class="doc-title">Final Presentation</div>
-                <div class="doc-meta">Software subsystems, hardware build, and live demo walkthrough · View opens a PDF rendering; download gets the original .pptx</div>
-              </div>
-              <div class="doc-actions">
-                <button class="doc-btn primary" onclick="toggleDoc('wcpres','assets/projects/wizardry-chess/Wizardry_Chess_Presentation.pdf','pdf',this)">View</button>
-                <a class="doc-btn" href="assets/projects/wizardry-chess/Wizardry_Chess_Presentation.pptx" download>Download .pptx</a>
-              </div>
-            </div>
-            <div class="doc-panel" id="panel-wcpres"></div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="reveal project-entry no-date">
-      <div>
         <div class="pe-title">Bring ROAR to Life</div>
         <div class="pe-org">UCF Senior Design, for Lawrence Hall of Science</div>
         <div class="pe-photo">
           <div class="pe-photo-inner"><img src="assets/projects/roar/ROAR_Final_Build_Photo.jpg" alt="Completed animatronic Stegosaurus skeleton, staged museum-style display"></div>
         </div>
         <p class="pe-desc">An anatomically correct, fully animatronic Stegosaurus skeleton — taken from a 150-page engineering design report through to a working prototype destined for a children's museum exhibit. Joint geometry validated with input from a paleontologist at the London Natural History Museum.</p>
-        <div class="pe-stat">Wrote the robot's control code and authored the technical memoranda on control theory, hardware, and autonomous operation.</div>
+        <div class="pe-stat">Wrote the robot's control code, authored technical memoranda on control theory, hardware, and autonomous operation, and developed project cost estimates for system components and implementation.</div>
         <div class="pe-tags"><span>Microcontrollers</span><span>Control Systems</span><span>SolidWorks</span><span>Systems Engineering</span></div>
 
         <div class="doc-library">
-          <div class="doc-library-head">Project Documents — 8 Files</div>
+          <div class="doc-library-head">Project Documents — 7 Files</div>
 
           <div class="doc-row">
             <div class="doc-row-main">
@@ -498,21 +445,6 @@
 
           <div class="doc-row">
             <div class="doc-row-main">
-              <div class="doc-badge">SLIDES</div>
-              <div class="doc-info">
-                <div class="doc-title">M5 — Critical Design Evaluation (Presentation)</div>
-                <div class="doc-meta">Slide deck accompanying the M5 report · View opens a PDF rendering; download gets the original .pptx</div>
-              </div>
-              <div class="doc-actions">
-                <button class="doc-btn primary" onclick="toggleDoc('m5pres','assets/projects/roar/M5_Presentation.pdf','pdf',this)">View</button>
-                <a class="doc-btn" href="assets/projects/roar/M5_Presentation.pptx" download>Download .pptx</a>
-              </div>
-            </div>
-            <div class="doc-panel" id="panel-m5pres"></div>
-          </div>
-
-          <div class="doc-row">
-            <div class="doc-row-main">
               <div class="doc-badge">PDF</div>
               <div class="doc-info">
                 <div class="doc-title">M6 — Design Implementation Report</div>
@@ -554,6 +486,51 @@
               </div>
             </div>
             <div class="doc-panel" id="panel-cost"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal project-entry no-date">
+      <div>
+        <div class="pe-title">Wizardry Chess</div>
+        <div class="pe-org">Team Project — with Ricardo Metral &amp; Max Eiken</div>
+        <p class="pe-desc">A physical chessboard that plays your online games for you. A Raspberry Pi pulls live game state from the Lichess API, translates each move into X–Y coordinates, and drives a custom gantry and electromagnet to move the correct piece in real time on a laser-cut wooden board.</p>
+        <div class="pe-stat">Built a "Loyalty Mechanic": blunder too many moves under live engine analysis, and your own pieces begin making random legal moves instead of yours.</div>
+        <div class="pe-tags"><span>Raspberry Pi</span><span>ROS2</span><span>Lichess API</span><span>Stepper Motors</span><span>Electromagnet Actuation</span></div>
+
+        <div class="doc-library">
+          <div class="doc-library-head">Project Documents — 2 Files</div>
+
+          <div class="doc-row">
+            <div class="doc-row-main">
+              <div class="doc-badge">PDF</div>
+              <div class="doc-info">
+                <div class="doc-title">Final Report</div>
+                <div class="doc-meta">Full system writeup — gantry &amp; electromagnet design, software architecture, API integration, and the Loyalty Mechanic</div>
+              </div>
+              <div class="doc-actions">
+                <button class="doc-btn primary" onclick="toggleDoc('wcreport','assets/projects/wizardry-chess/Wizardry_Chess_Final_Report.pdf','pdf',this)">View</button>
+                <a class="doc-btn" href="assets/projects/wizardry-chess/Wizardry_Chess_Final_Report.pdf" download>Download</a>
+              </div>
+            </div>
+            <div class="doc-panel" id="panel-wcreport"></div>
+          </div>
+
+          <div class="doc-row">
+            <div class="doc-row-main">
+              <div class="doc-badge">SLIDES</div>
+              <div class="doc-info">
+                <div class="doc-title">Final Presentation</div>
+                <div class="doc-meta">Software subsystems, hardware build, and live demo walkthrough · View opens a PDF rendering; download gets the original .pptx</div>
+              </div>
+              <div class="doc-actions">
+                <button class="doc-btn primary" onclick="toggleDoc('wcpres','assets/projects/wizardry-chess/Wizardry_Chess_Presentation.pdf','pdf',this)">View</button>
+                <a class="doc-btn" href="assets/projects/wizardry-chess/Wizardry_Chess_Presentation.pptx" download>Download .pptx</a>
+              </div>
+            </div>
+            <div class="doc-panel" id="panel-wcpres"></div>
           </div>
 
         </div>
@@ -663,10 +640,10 @@
     <div class="reveal project-entry">
       <div class="pe-date">Aug 2024 – Present</div>
       <div>
-        <div class="pe-title">President, All U.S. Chapters</div>
+        <div class="pe-title">Canciller &amp; Former Secretary, Delta Chapter</div>
         <div class="pe-org">Phi Eta Mu (National Nonprofit, 1,000+ Members)</div>
-        <p class="pe-desc">Run directive meetings across U.S. chapters covering profit and participation reporting, and review/sign off on every chapter's accounting books and records. Launched a merchandise store as a new sustainable revenue stream and organized cross-chapter events nationwide, from membership reunions to a 60-person year-end camping trip. Previously served as Secretary, managing organizational records, chapter communications, and event coordination.</p>
-        <div class="pe-stat">Monthly performance reports to the Higher Council, representing every U.S. chapter.</div>
+        <p class="pe-desc">Help lead operations, administration, and strategic initiatives for the U.S. Delta Chapter, representing members across all states. Conduct directive meetings covering financial and participation reporting, review accounting records, and oversee monthly reports submitted to the Higher Council. Led engagement and revenue-generating initiatives, including launching a merchandise store and organizing nationwide cross-chapter events.</p>
+        <div class="pe-stat">Founded the Phi Eta Mu Networking LinkedIn group to strengthen professional connections across chapters and alumni — grew the community to 100+ members in under one month.</div>
         <div class="pe-tags"><span>Operations</span><span>Financial Oversight</span><span>Event Coordination</span></div>
       </div>
     </div>
@@ -709,10 +686,9 @@
     <div class="reveal project-entry">
       <div class="pe-date">Nov 2022 – May 2024</div>
       <div>
-        <div class="pe-title">Materials Property Prediction</div>
-        <div class="pe-org">Dr. Sohn Materials Science &amp; Engineering Group, UCF</div>
-        <p class="pe-desc">Built a small AI tool to predict material properties from processing parameters, alongside hands-on work optimizing parameters for 3D-printed samples on laser-melting and gas-atomization equipment.</p>
-        <div class="pe-stat">Advanced lab work: SEM, XRD, scientific furnace, selective laser melting.</div>
+        <div class="pe-title">Undergraduate Research Student</div>
+        <div class="pe-org">Dr. Sohn Materials Science &amp; Engineering Research Group, UCF</div>
+        <p class="pe-desc">Supported materials development research by preparing and testing 3D-printed samples to evaluate processing parameters and material performance. Contributed to the development of an AI-based material property prediction tool through data collection, preprocessing, and dataset preparation for model training. Gained hands-on experience with advanced laboratory equipment, including SEM, XRD, scientific furnaces, selective laser melting, and gas atomization systems.</p>
         <div class="pe-tags"><span>Python</span><span>SEM / XRD Analysis</span><span>Laser Powder-Bed Printing</span></div>
       </div>
     </div>
@@ -836,6 +812,10 @@
         <div class="cc-label">LinkedIn</div>
         <div class="cc-value">/in/kevinrivera1975<span class="arrow">→</span></div>
       </a>
+      <a href="tel:+18637226776" class="contact-card">
+        <div class="cc-label">Phone</div>
+        <div class="cc-value">(863) 722-6776<span class="arrow">→</span></div>
+      </a>
     </div>
   </div>
 </section>
@@ -843,7 +823,7 @@
 <footer>
   <div class="wrap foot-row">
     <span>© 2026 Kevin Rivera</span>
-    <span>Durham, NC · Orlando, FL</span>
+    <span>Durham, NC · Orlando, FL · Mayagüez, PR</span>
   </div>
 </footer>
 
