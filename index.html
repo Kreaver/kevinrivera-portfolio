@@ -103,7 +103,10 @@
   .hero .subtitle{ font-family:var(--serif); font-style:italic; font-size:19px; color:var(--ink-dim); margin-bottom:6px; }
   .hero .subtitle2{ font-family:var(--sans); font-size:12.5px; letter-spacing:.06em; color:var(--ink-faint); text-transform:uppercase; margin-bottom:30px; }
   .hero .intro{ color:var(--ink-dim); font-size:16.5px; max-width:520px; margin-bottom:38px; }
-  .btn-row{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:54px; }
+  .btn-row{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:22px; }
+  .hero-contact{ margin-bottom:54px; display:flex; gap:18px; flex-wrap:wrap; font-family:var(--sans); font-size:12px; }
+  .hero-contact a{ color:var(--ink-dim); border-bottom:1px solid var(--line); padding-bottom:2px; }
+  .hero-contact a:hover{ color:var(--gold); border-bottom-color:var(--gold); }
   .btn{
     font-family:var(--sans); font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; font-weight:600;
     padding:15px 28px; transition:all .2s; cursor:pointer; display:inline-block;
@@ -211,7 +214,7 @@
   .resume-fallback{ display:none; padding:60px 20px; text-align:center; font-family:var(--sans); font-size:13px; color:var(--ink-dim); }
 
   /* ---------- contact ---------- */
-  .contact-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; max-width:760px; margin:0 auto; background:var(--line); border:1px solid var(--line); }
+  .contact-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; max-width:920px; margin:0 auto; background:var(--line); border:1px solid var(--line); }
   .contact-card{ background:var(--bg); padding:30px 28px; transition:background .2s; }
   .contact-card:hover{ background:var(--bg-soft); }
   .contact-card .cc-label{ font-family:var(--sans); font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-faint); margin-bottom:10px; }
@@ -297,6 +300,12 @@
       <div class="btn-row">
         <a href="#projects" class="btn btn-primary">View Projects</a>
         <a href="#resume" class="btn btn-ghost">Download Résumé</a>
+      </div>
+      <div class="hero-contact">
+        <a href="mailto:kevinandres2069@gmail.com">kevinandres2069@gmail.com</a>
+        <a href="tel:+18637226776">(863) 722-6776</a>
+        <a href="https://linkedin.com/in/kevinrivera1975" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Kreaver" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
     <div>
@@ -815,6 +824,10 @@
       <a href="tel:+18637226776" class="contact-card">
         <div class="cc-label">Phone</div>
         <div class="cc-value">(863) 722-6776<span class="arrow">→</span></div>
+      </a>
+      <a href="https://github.com/Kreaver" target="_blank" rel="noopener" class="contact-card">
+        <div class="cc-label">GitHub</div>
+        <div class="cc-value">/Kreaver<span class="arrow">→</span></div>
       </a>
     </div>
   </div>
