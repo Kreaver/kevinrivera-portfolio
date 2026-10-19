@@ -139,6 +139,9 @@
   .edu-doclink:hover{ color:var(--gold); }
   .course-group{ margin-bottom:14px; }
   .course-group:last-child{ margin-bottom:0; }
+  .course-school{ font-family:var(--display); font-size:21px; color:var(--navy); padding-bottom:8px; margin-bottom:16px; border-bottom:1px solid var(--line); }
+  .course-school span{ font-family:var(--sans); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); margin-left:8px; }
+  .course-school.next{ margin-top:34px; }
   .course-group-label{ font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); margin-bottom:7px; }
   .course-chips{ display:flex; flex-wrap:wrap; gap:6px; }
   .course-chip{ font-family:var(--sans); font-size:11px; color:var(--ink-dim); background:var(--bg-soft); border:1px solid var(--line); padding:4px 9px; line-height:1.3; }
@@ -412,11 +415,7 @@
       <div>
         <div class="pe-title">Observer-Based Fault Detection &amp; Isolation for Industrial Systems</div>
         <div class="pe-org">ME 627, Duke · Solo project · Oct 2026 – Present</div>
-        <p class="pe-desc">Model-based diagnosis of gradual sensor and actuator faults to support predictive maintenance.</p>
-        <ul class="pe-list">
-          <li>Building a state-observer bank in Python (python-control, NumPy) for residual generation, fault injection, and isolability analysis of sensor drift and loss of actuator authority.</li>
-          <li>Expected completion December 2026.</li>
-        </ul>
+        <p class="pe-desc">Model-based diagnosis of gradual sensor and actuator faults to support predictive maintenance. Building a state-observer bank in Python (python-control, NumPy) for residual generation, fault injection, and isolability analysis of sensor drift and loss of actuator authority. Expected completion December 2026.</p>
         <div class="pe-tags"><span>Python</span><span>python-control</span><span>NumPy</span><span>State Observers</span><span>Fault Detection</span></div>
       </div>
     </div>
@@ -424,22 +423,13 @@
     <div class="reveal project-entry no-date">
       <div>
         <div class="pe-title">Bring ROAR to Life</div>
-        <div class="pe-org">UCF Senior Design, for Lawrence Hall of Science · 5-person team · Aug 2025 – May 2026</div>
+        <div class="pe-org">UCF Senior Design, for Lawrence Hall of Science</div>
         <div class="pe-photo">
           <div class="pe-photo-inner"><img src="assets/projects/roar/ROAR_Final_Build_Photo.jpg" alt="Completed animatronic Stegosaurus skeleton, staged museum-style display"></div>
         </div>
-        <p class="pe-desc">An anatomically correct, fully animatronic Stegosaurus skeleton — taken from 150+ page engineering design reports through to a working prototype destined for a children's museum exhibit. Joint geometry validated with input from a paleontologist at the London Natural History Museum.</p>
-        <div class="pe-stat">Owned electrical design, C++ firmware, and system integration — and delivered the prototype for ~$450 against an $800 budget (~44% under).</div>
-        <ul class="pe-list">
-          <li>Designed the wiring diagrams, then soldered and integrated an ESP32 controlling 11 servos across four 2-DOF legs and a soft continuum tail, plus an IMU, accelerometer, temperature sensor, and audio playback.</li>
-          <li>Diagnosed false tip-over alarms caused by 12 V servo power noise corrupting low-voltage IMU readings; implemented a 5-sample averaging filter with spike rejection and asymmetric weighting (slow rise, fast decay) that reduced false fail-safe triggers.</li>
-          <li>Designed safety systems: IMU tip-over and over-temperature detection that lock out operator inputs and alert staff, plus fuses, emergency stops, and fully enclosed electronics for child-safe operation.</li>
-          <li>Built a long-range teleoperation interface: an ESP32-hosted web app that bridges a PS4 controller through any smartphone, reaching a tested ~100–150 ft range beyond direct-Bluetooth limits, with live IMU, temperature, controller-input, and terminal telemetry streamed to the phone for real-time debugging.</li>
-          <li>Made the component and purchasing decisions behind the budget result and produced the full cost analysis; co-authored multiple 150+ page design reports with stakeholder and risk analysis, including electrical and fire hazards.</li>
-          <li>Served as point of contact for the Natural History Museum, London and Lawrence Hall of Science (UC Berkeley) on skeletal accuracy; applied gait data to leg motion and, per their feedback, added off-the-shelf parts and hot-swap batteries.</li>
-          <li>Presented in weekly design reviews to an adjunct professor and full-time NASA engineer; the prototype ran 30 minutes to 2 hours per battery and completed 3 demos.</li>
-        </ul>
-        <div class="pe-tags"><span>ESP32</span><span>C++</span><span>Embedded Systems</span><span>Wiring Diagrams</span><span>Control Systems</span><span>SolidWorks</span><span>Systems Engineering</span></div>
+        <p class="pe-desc">An anatomically correct, fully animatronic Stegosaurus skeleton — taken from a 150-page engineering design report through to a working prototype destined for a children's museum exhibit. Joint geometry validated with input from a paleontologist at the London Natural History Museum.</p>
+        <div class="pe-stat">Wrote the robot's control code, authored technical memoranda on control theory, hardware, and autonomous operation, and developed project cost estimates for system components and implementation.</div>
+        <div class="pe-tags"><span>Microcontrollers</span><span>Control Systems</span><span>SolidWorks</span><span>Systems Engineering</span></div>
 
         <div class="doc-library">
           <div class="doc-library-head">Project Documents — 7 Files</div>
@@ -556,15 +546,10 @@
     <div class="reveal project-entry no-date">
       <div>
         <div class="pe-title">Wizardry Chess</div>
-        <div class="pe-org">3-person team — with Ricardo Metral &amp; Max Eiken · Jan 2026 – May 2026</div>
+        <div class="pe-org">Team Project — with Ricardo Metral &amp; Max Eiken</div>
         <p class="pe-desc">A physical chessboard that plays your online games for you. A Raspberry Pi pulls live game state from the Lichess API, translates each move into X–Y coordinates, and drives a custom gantry and electromagnet to move the correct piece in real time on a laser-cut wooden board.</p>
-        <ul class="pe-list">
-          <li>Assembled and wired the custom XY gantry, stepper motors, and electromagnet actuation, controlled by a Raspberry Pi running ROS2.</li>
-          <li>Validated and reviewed the team's C++ control code; tested in 2 full player-vs-player games at ~2–4 seconds per move.</li>
-          <li>Traced misplaced moves to speech-to-text misrecognition of spoken moves by reading the terminal output of the audio input.</li>
-        </ul>
-        <div class="pe-stat">Conceived the "Loyalty Mechanic" (built by a teammate): blunder too many moves under live engine analysis, and your own pieces begin making insubordinate moves instead of yours.</div>
-        <div class="pe-tags"><span>Raspberry Pi</span><span>ROS2</span><span>C++</span><span>Lichess API</span><span>Stepper Motors</span><span>Electromagnet Actuation</span></div>
+        <div class="pe-stat">Built a "Loyalty Mechanic": blunder too many moves under live engine analysis, and your own pieces begin making random legal moves instead of yours.</div>
+        <div class="pe-tags"><span>Raspberry Pi</span><span>ROS2</span><span>Lichess API</span><span>Stepper Motors</span><span>Electromagnet Actuation</span></div>
 
         <div class="doc-library">
           <div class="doc-library-head">Project Documents — 2 Files</div>
@@ -741,9 +726,7 @@
       <div>
         <div class="pe-title">Committee Member</div>
         <div class="pe-org">Phi Eta Mu – Committee of Medios Electrónicos</div>
-        <ul class="pe-list">
-          <li>Contacted 8 employers to date for the March 2027 career fair (prior fairs: 600–800 attendees, 40+ employers).</li>
-        </ul>
+        <p class="pe-desc">Contacted 8 employers to date for the March 2027 career fair (prior fairs: 600–800 attendees, 40+ employers).</p>
         <div class="pe-tags"><span>Employer Outreach</span><span>Career Fair</span></div>
       </div>
     </div>
@@ -753,9 +736,7 @@
       <div>
         <div class="pe-title">Consultant</div>
         <div class="pe-org">Duke Advanced Degree Consulting Club (DACC)</div>
-        <ul class="pe-list">
-          <li>Benchmarked competitors' products, prices, features, geographic reach, and accessory offerings to inform a pro bono client's market positioning (under NDA).</li>
-        </ul>
+        <p class="pe-desc">Benchmarked competitors' products, prices, features, geographic reach, and accessory offerings to inform a pro bono client's market positioning (under NDA).</p>
         <div class="pe-tags"><span>Market Research</span><span>Competitive Benchmarking</span></div>
       </div>
     </div>
@@ -826,8 +807,8 @@
     </div>
 
     <div class="panel reveal" style="background:#fff; max-width:880px; margin:0 auto; padding:32px 36px;">
+      <div class="course-school">Graduate — Duke University<span>M.Eng. Robotics &amp; Autonomy · In Progress</span></div>
       <div class="course-group">
-        <div class="course-group-label">Graduate — Duke University (In Progress)</div>
         <div class="course-chips">
           <span class="course-chip">Linear System Theory &amp; Machine Learning</span>
           <span class="course-chip"><span class="code">ME 555</span>Continuum Robotics</span>
@@ -835,6 +816,7 @@
         </div>
       </div>
 
+      <div class="course-school next">Undergraduate — University of Central Florida<span>B.S. Mechanical Engineering</span></div>
       <div class="course-group">
         <div class="course-group-label">Math &amp; Statistics</div>
         <div class="course-chips">
