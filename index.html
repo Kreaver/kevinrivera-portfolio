@@ -153,6 +153,9 @@
   .pe-org{ font-family:var(--sans); font-style:normal; font-size:12.5px; color:var(--gold); letter-spacing:.03em; margin-bottom:16px; }
   .pe-desc{ color:var(--ink-dim); font-size:15.5px; margin-bottom:14px; max-width:640px; }
   .pe-stat{ font-family:var(--serif); font-style:italic; font-size:15px; color:var(--navy); margin-bottom:14px; padding-left:16px; border-left:2px solid var(--gold); max-width:600px; }
+  .pe-list{ list-style:none; color:var(--ink-dim); font-size:15px; margin:0 0 16px; max-width:660px; }
+  .pe-list li{ position:relative; padding-left:18px; margin-bottom:7px; }
+  .pe-list li::before{ content:""; position:absolute; left:2px; top:.72em; width:6px; height:1px; background:var(--gold); }
   .pe-tags{ font-family:var(--sans); font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-faint); }
   .pe-tags span:not(:last-child)::after{ content:"·"; margin:0 8px; color:var(--line-strong); }
   .pe-doclink{ display:inline-flex; align-items:center; gap:7px; font-family:var(--sans); font-size:12.5px; font-weight:600; color:var(--navy); margin-bottom:16px; padding-bottom:2px; border-bottom:1px solid var(--gold); }
@@ -212,6 +215,13 @@
   .resume-frame{ border:1px solid var(--navy); padding:9px; }
   .resume-frame-inner{ border:1px solid var(--gold); }
   .resume-frame embed{ width:100%; height:620px; display:block; background:#f4f3ef; }
+  .resume-options{ display:flex; flex-direction:column; gap:12px; margin-bottom:8px; }
+  .resume-opt{ border:1px solid var(--line); background:#fff; padding:18px 20px; transition:border-color .2s; }
+  .resume-opt.active{ border-color:var(--gold); box-shadow:inset 3px 0 0 var(--gold); }
+  .resume-opt-title{ font-family:var(--display); font-size:19px; color:var(--navy); margin-bottom:2px; }
+  .resume-opt-meta{ font-family:var(--sans); font-size:12px; color:var(--ink-faint); margin-bottom:12px; }
+  .resume-opt .doc-actions{ display:flex; gap:8px; }
+  .resume-frame-label{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:10px; }
   .resume-fallback{ display:none; padding:60px 20px; text-align:center; font-family:var(--sans); font-size:13px; color:var(--ink-dim); }
 
   /* ---------- contact ---------- */
@@ -299,9 +309,9 @@
     <div>
       <div class="eyebrow">Robotics &amp; Mechanical Engineering</div>
       <h1>Kevin Rivera</h1>
-      <div class="subtitle">Incoming M.Eng. Student, Robotics &amp; Autonomy — Duke University</div>
+      <div class="subtitle">M.Eng. Student, Robotics &amp; Autonomy — Duke University</div>
       <div class="subtitle2">B.S. Mechanical Engineering · University of Central Florida</div>
-      <p class="intro">I build vision, control, and mechanical systems that enable machines to operate precisely in the physical world, from a sub-millimeter depth-sensing pipeline for an agricultural robot to a fully animatronic museum exhibit prototype. I'm drawn to problems where physical constraints matter and precision down to a tenth of a millimeter makes a real difference. I'm motivated by challenging problems that reward first-principles thinking, intellectual rigor, and fast iteration.</p>
+      <p class="intro">I build vision, control, and mechanical systems that enable machines to operate precisely in the physical world, from a low-cost dual-webcam depth-estimation system for a strawberry-harvesting robot to a fully animatronic museum exhibit prototype. I'm drawn to problems where physical constraints matter and high precision makes a real difference. I'm motivated by challenging problems that reward first-principles thinking, intellectual rigor, and fast iteration.</p>
       <div class="btn-row">
         <a href="#projects" class="btn btn-primary">View Projects</a>
         <a href="#resume" class="btn btn-ghost">Download Résumé</a>
@@ -331,42 +341,39 @@
     </div>
     <div class="about-grid">
       <div class="reveal">
-        <p>I began my mechanical engineering studies at UCF with a broad interest in building physical systems, without a defined specialization. Early on, I gained exposure to structured engineering workflows through research in materials science in the Dr. Sohn Research Group. There, I learned foundational lab practices—how to document experiments, prepare and test 3D-printed samples, collect and organize data, and follow repeatable procedures used in engineering research environments. This experience gave me my first understanding of basic research discipline and experimental work.</p>
-        <p>At the same time, I worked as an estimating intern in construction engineering, supporting cost analysis and infrastructure projects under predefined deliverables and established industry processes. These early roles grounded my understanding of engineering as structured, process-driven work.</p>
-        <p>A shift in direction came through a mechatronics course, where mechanical systems, electronics, and computation were treated as a unified system. For the first time, I was working on problems where system behavior emerged from the interaction of hardware and software. This is where I became interested in robotics as a discipline.</p>
-        <p>I then joined the Dr. Xu Agricultural Robotics Lab at UCF, where I work on a real-time computer vision system for distance estimation in a strawberry-harvesting robot. The project focuses on classical, non-neural methods using dual RGB cameras, along with experimental validation using custom test setups designed in SolidWorks. I also support embedded system integration and serve as a communication point with the lab lead for progress updates and technical coordination.</p>
-        <p>In parallel, I became involved in Phi Eta Mu, a fraternity that operates primarily in Spanish. At the start, I had limited fluency, so I learned Spanish throughout the initiation process in order to fully participate. Over time, I progressed into leadership roles as Secretary and later Canciller of a 40-member chapter, where I helped manage operations, maintain records, coordinate meetings, and support financial and administrative reporting. I also contributed to the development of cross-chapter events and initiatives to strengthen alumni and member engagement, including the creation of a professional networking group to support long-term connections.</p>
-        <p>Outside of lab and organizational work, I have continued to build systems through hands-on engineering projects, including an animatronic robotic system developed in collaboration with the Lawrence Hall of Science at UC Berkeley. The project integrates mechanical design, embedded control, and system-level coordination to create a fully functional interactive exhibit prototype.</p>
-        <p>Across these experiences, I have developed a more deliberate approach to engineering—starting from system behavior, breaking problems into interacting components, and iterating through design, implementation, and testing. I am now drawn to robotics because it sits at the intersection of these domains, where success depends on both technical correctness and system-level integration.</p>
-        <p>I am pursuing graduate study in Robotics &amp; Autonomy to continue developing in this direction, working on systems where perception, computation, and actuation must all align under real-world constraints.</p>
+        <p>ADD INFO HERE</p>
       </div>
       <div class="reveal">
         <div class="panel">
           <div class="panel-block">
             <h4>Education</h4>
-            <div class="edu-entry"><div class="deg">M.Eng., Robotics &amp; Autonomy</div><div class="sch">Duke University · Incoming, Fall 2026</div></div>
+            <div class="edu-entry"><div class="deg">M.Eng., Robotics &amp; Autonomy</div><div class="sch">Duke University · Aug 2026 – Dec 2027 (Expected)</div></div>
             <div class="edu-entry"><div class="deg">B.S., Mechanical Engineering</div><div class="sch">University of Central Florida · 2022–2026 · GPA 3.51</div></div>
             <a href="assets/resume/Kevin_Rivera_UCF_Diploma.pdf" target="_blank" rel="noopener" class="edu-doclink">View Diploma (PDF) →</a>
             <div class="edu-badge">
               <img src="assets/images/duke-badge.jpg" alt="Duke Engineering — Robotics &amp; Autonomy">
               <div class="edu-badge-text">
                 <strong>Duke University</strong>
-                <span>M.Eng. in Robotics &amp; Autonomy · Admitted, Fall 2026</span>
+                <span>M.Eng. in Robotics &amp; Autonomy · Expected Dec 2027</span>
                 <span style="font-size:10.5px; color:var(--ink-faint);">Pratt School of Engineering</span>
               </div>
             </div>
           </div>
           <div class="panel-block">
             <h4>Coursework</h4>
-            <p class="plain">Statics · Dynamics · Solid Mechanics · Thermodynamics · Fluid Mechanics · Heat Transfer · Mechatronics · Intro to Robotics · Senior Design I &amp; II</p>
+            <p class="plain"><strong>Duke:</strong> Linear System Theory &amp; Machine Learning · Continuum Robotics · Management in High Tech Industries<br><strong>UCF:</strong> Intro to Robotics · Vibrations &amp; Controls · Heat Transfer I &amp; II · Thermodynamics · Computer-Aided Engineering Design · Mechatronics · Senior Design I &amp; II</p>
           </div>
           <div class="panel-block">
             <h4>Software &amp; Design</h4>
-            <p class="plain">MATLAB · Python · C++ · ROS2 · SolidWorks · Fusion 360 · AutoCAD · ImageJ / Fiji</p>
+            <p class="plain">MATLAB · Python (NumPy, python-control) · C++ · ROS2 · SolidWorks · Fusion 360 · AutoCAD · ANSYS (structural FEA) · Gazebo · Linux · Git · Microsoft Office · Bluebeam Revu · ImageJ / Fiji</p>
           </div>
           <div class="panel-block">
             <h4>Hardware &amp; Lab</h4>
-            <p class="plain">Raspberry Pi · Arduino · ESP32 · Stepper &amp; gantry systems · SEM / XRD · SLM 3D printing · FDM 3D Printing · OrcaSlicer</p>
+            <p class="plain">ESP32 · Arduino · Raspberry Pi (Pico) · Servos · Stepper &amp; gantry systems · IMU · Temperature sensors · SEM / XRD · SLM 3D printing · FDM 3D printing (incl. TPU) · OrcaSlicer</p>
+          </div>
+          <div class="panel-block">
+            <h4>Technical</h4>
+            <p class="plain">Computer Vision · Image Processing · Controls · Embedded Systems · System Integration · Design for Manufacturing · Wiring Diagrams · Soldering · Fault Detection · Root Cause Analysis · Technical Documentation · Quantity Takeoffs · Cost Estimating</p>
           </div>
           <div class="panel-block">
             <h4>Languages</h4>
@@ -389,14 +396,50 @@
 
     <div class="reveal project-entry no-date">
       <div>
+        <div class="pe-title">Collapsible SpiRobs Robotic Arm</div>
+        <div class="pe-org">ME 555, Continuum Robotics, Duke · 4-person team · Aug 2026 – Present</div>
+        <p class="pe-desc">Design, control, and assembly of a collapsible, tendon-driven continuum robotic arm.</p>
+        <ul class="pe-list">
+          <li>Independently iterated the 2D planar arm through 5 SolidWorks design-for-manufacturing revisions, resolving cracking, layer delamination, weak thin connections, and undersized holes by thickening the spine and tuning TPU 95A print settings.</li>
+          <li>Optimized segment angles and added cutouts so the design collapses ~40% shorter (CAD estimate).</li>
+          <li>Extending the design to 3D: diagnosing first-print failures by scaling the model up 30% and revising support settings, with ESP32 teleoperation of three nitinol tendons planned (two for left/right bending, one for extension/contraction).</li>
+        </ul>
+        <div class="pe-tags"><span>SolidWorks</span><span>Design for Manufacturing</span><span>TPU 3D Printing</span><span>ESP32</span><span>Continuum Robotics</span></div>
+      </div>
+    </div>
+
+    <div class="reveal project-entry no-date">
+      <div>
+        <div class="pe-title">Observer-Based Fault Detection &amp; Isolation for Industrial Systems</div>
+        <div class="pe-org">ME 627, Duke · Solo project · Oct 2026 – Present</div>
+        <p class="pe-desc">Model-based diagnosis of gradual sensor and actuator faults to support predictive maintenance.</p>
+        <ul class="pe-list">
+          <li>Building a state-observer bank in Python (python-control, NumPy) for residual generation, fault injection, and isolability analysis of sensor drift and loss of actuator authority.</li>
+          <li>Expected completion December 2026.</li>
+        </ul>
+        <div class="pe-tags"><span>Python</span><span>python-control</span><span>NumPy</span><span>State Observers</span><span>Fault Detection</span></div>
+      </div>
+    </div>
+
+    <div class="reveal project-entry no-date">
+      <div>
         <div class="pe-title">Bring ROAR to Life</div>
-        <div class="pe-org">UCF Senior Design, for Lawrence Hall of Science</div>
+        <div class="pe-org">UCF Senior Design, for Lawrence Hall of Science · 5-person team · Aug 2025 – May 2026</div>
         <div class="pe-photo">
           <div class="pe-photo-inner"><img src="assets/projects/roar/ROAR_Final_Build_Photo.jpg" alt="Completed animatronic Stegosaurus skeleton, staged museum-style display"></div>
         </div>
-        <p class="pe-desc">An anatomically correct, fully animatronic Stegosaurus skeleton — taken from a 150-page engineering design report through to a working prototype destined for a children's museum exhibit. Joint geometry validated with input from a paleontologist at the London Natural History Museum.</p>
-        <div class="pe-stat">Wrote the robot's control code, authored technical memoranda on control theory, hardware, and autonomous operation, and developed project cost estimates for system components and implementation.</div>
-        <div class="pe-tags"><span>Microcontrollers</span><span>Control Systems</span><span>SolidWorks</span><span>Systems Engineering</span></div>
+        <p class="pe-desc">An anatomically correct, fully animatronic Stegosaurus skeleton — taken from 150+ page engineering design reports through to a working prototype destined for a children's museum exhibit. Joint geometry validated with input from a paleontologist at the London Natural History Museum.</p>
+        <div class="pe-stat">Owned electrical design, C++ firmware, and system integration — and delivered the prototype for ~$450 against an $800 budget (~44% under).</div>
+        <ul class="pe-list">
+          <li>Designed the wiring diagrams, then soldered and integrated an ESP32 controlling 11 servos across four 2-DOF legs and a soft continuum tail, plus an IMU, accelerometer, temperature sensor, and audio playback.</li>
+          <li>Diagnosed false tip-over alarms caused by 12 V servo power noise corrupting low-voltage IMU readings; implemented a 5-sample averaging filter with spike rejection and asymmetric weighting (slow rise, fast decay) that reduced false fail-safe triggers.</li>
+          <li>Designed safety systems: IMU tip-over and over-temperature detection that lock out operator inputs and alert staff, plus fuses, emergency stops, and fully enclosed electronics for child-safe operation.</li>
+          <li>Built a long-range teleoperation interface: an ESP32-hosted web app that bridges a PS4 controller through any smartphone, reaching a tested ~100–150 ft range beyond direct-Bluetooth limits, with live IMU, temperature, controller-input, and terminal telemetry streamed to the phone for real-time debugging.</li>
+          <li>Made the component and purchasing decisions behind the budget result and produced the full cost analysis; co-authored multiple 150+ page design reports with stakeholder and risk analysis, including electrical and fire hazards.</li>
+          <li>Served as point of contact for the Natural History Museum, London and Lawrence Hall of Science (UC Berkeley) on skeletal accuracy; applied gait data to leg motion and, per their feedback, added off-the-shelf parts and hot-swap batteries.</li>
+          <li>Presented in weekly design reviews to an adjunct professor and full-time NASA engineer; the prototype ran 30 minutes to 2 hours per battery and completed 3 demos.</li>
+        </ul>
+        <div class="pe-tags"><span>ESP32</span><span>C++</span><span>Embedded Systems</span><span>Wiring Diagrams</span><span>Control Systems</span><span>SolidWorks</span><span>Systems Engineering</span></div>
 
         <div class="doc-library">
           <div class="doc-library-head">Project Documents — 7 Files</div>
@@ -513,10 +556,15 @@
     <div class="reveal project-entry no-date">
       <div>
         <div class="pe-title">Wizardry Chess</div>
-        <div class="pe-org">Team Project — with Ricardo Metral &amp; Max Eiken</div>
+        <div class="pe-org">3-person team — with Ricardo Metral &amp; Max Eiken · Jan 2026 – May 2026</div>
         <p class="pe-desc">A physical chessboard that plays your online games for you. A Raspberry Pi pulls live game state from the Lichess API, translates each move into X–Y coordinates, and drives a custom gantry and electromagnet to move the correct piece in real time on a laser-cut wooden board.</p>
-        <div class="pe-stat">Built a "Loyalty Mechanic": blunder too many moves under live engine analysis, and your own pieces begin making random legal moves instead of yours.</div>
-        <div class="pe-tags"><span>Raspberry Pi</span><span>ROS2</span><span>Lichess API</span><span>Stepper Motors</span><span>Electromagnet Actuation</span></div>
+        <ul class="pe-list">
+          <li>Assembled and wired the custom XY gantry, stepper motors, and electromagnet actuation, controlled by a Raspberry Pi running ROS2.</li>
+          <li>Validated and reviewed the team's C++ control code; tested in 2 full player-vs-player games at ~2–4 seconds per move.</li>
+          <li>Traced misplaced moves to speech-to-text misrecognition of spoken moves by reading the terminal output of the audio input.</li>
+        </ul>
+        <div class="pe-stat">Conceived the "Loyalty Mechanic" (built by a teammate): blunder too many moves under live engine analysis, and your own pieces begin making insubordinate moves instead of yours.</div>
+        <div class="pe-tags"><span>Raspberry Pi</span><span>ROS2</span><span>C++</span><span>Lichess API</span><span>Stepper Motors</span><span>Electromagnet Actuation</span></div>
 
         <div class="doc-library">
           <div class="doc-library-head">Project Documents — 2 Files</div>
@@ -646,23 +694,16 @@
     </div>
 
     <div class="reveal project-entry">
-      <div class="pe-date">Mar 2025 – Jun 2026</div>
-      <div>
-        <div class="pe-title">Product Engineer</div>
-        <div class="pe-org">Jet Set Investments LLC</div>
-        <p class="pe-desc">Developed and contributed to a company patent for a roadway lighting solution, engineered to cut cost while improving safety and energy efficiency.</p>
-        <div class="pe-tags"><span>Product Development</span><span>Patent Filing</span></div>
-      </div>
-    </div>
-
-    <div class="reveal project-entry">
       <div class="pe-date">May 2024 – Jan 2025</div>
       <div>
-        <div class="pe-title">Intern, Cost Engineering</div>
-        <div class="pe-org">Vinci Construction – Hubbard</div>
-        <p class="pe-desc">Built cost analyses and estimates for transportation, permitting, and asphalt project implementation, working both as primary contractor and subcontractor on public and private jobs — including Universal Studios, Walt Disney World, FDOT, Orlando International Airport, and multiple Central Florida counties.</p>
-        <div class="pe-stat">Weekly reports and department review meetings on active project costs.</div>
-        <div class="pe-tags"><span>Cost Estimating</span><span>Infrastructure</span><span>HCSS HeavyBid</span></div>
+        <div class="pe-title">Estimating Intern</div>
+        <div class="pe-org">Hubbard Construction (Vinci)</div>
+        <ul class="pe-list">
+          <li>Performed quantity takeoffs from engineering plan sets and prepared 30+ asphalt estimates ($200K to multimillion) in Excel and Bluebeam Revu for FDOT, Walt Disney World, Universal, Orlando International Airport, and multiple Florida counties.</li>
+          <li>Reconciled takeoff quantities against engineer-predicted quantities and investigated discrepancies, tracing them to mislabeled plans or calculation errors.</li>
+        </ul>
+        <div class="pe-stat">Takeoffs supported winning bids including I-4, the Epic Universe bus depot, and Orlando Sanford Airport.</div>
+        <div class="pe-tags"><span>Quantity Takeoffs</span><span>Cost Estimating</span><span>Bluebeam Revu</span><span>Excel</span><span>Infrastructure</span></div>
       </div>
     </div>
 
@@ -681,11 +722,50 @@
     <div class="reveal project-entry">
       <div class="pe-date">Aug 2024 – Present</div>
       <div>
-        <div class="pe-title">Canciller &amp; Former Secretary, Delta Chapter</div>
-        <div class="pe-org">Phi Eta Mu (National Nonprofit, 1,000+ Members)</div>
-        <p class="pe-desc">Help lead operations, administration, and strategic initiatives for the U.S. Delta Chapter, representing members across all states. Conduct directive meetings covering financial and participation reporting, review accounting records, and oversee monthly reports submitted to the Higher Council. Led engagement and revenue-generating initiatives, including launching a merchandise store and organizing nationwide cross-chapter events.</p>
-        <div class="pe-stat">Founded the Phi Eta Mu Networking LinkedIn group to strengthen professional connections across chapters and alumni — grew the community to 100+ members in under one month.</div>
-        <div class="pe-tags"><span>Operations</span><span>Financial Oversight</span><span>Event Coordination</span></div>
+        <div class="pe-title">Guardian &amp; Former Canciller, Secretary</div>
+        <div class="pe-org">Phi Eta Mu – Delta Chapter Non-Profit</div>
+        <ul class="pe-list">
+          <li>Led operations and administration of a 40-member chapter as Canciller.</li>
+          <li>Organized cross-chapter events including Universal Halloween Horror Nights and a year-end camping trip (80+ attendees), raising meeting and event attendance ~20% above typical levels.</li>
+          <li>Created and sold chapter merchandise, increasing chapter funds by 60%.</li>
+          <li>Founded and manage the Phi Eta Mu Networking LinkedIn group with supreme council support, growing it to 110+ members in 5 months across all chapters.</li>
+          <li>Hosted ~7 Zoom panels on careers, personal finance, and LSAT/MCAT prep, each with 3–4 panelists and up to 60 attendees.</li>
+        </ul>
+        <div class="pe-stat">Awarded the Orden José Menéndez (2026) for service and leadership — given to at most 2 members per year since 1981.</div>
+        <div class="pe-tags"><span>Operations</span><span>Event Coordination</span><span>Fundraising</span><span>Networking</span></div>
+      </div>
+    </div>
+
+    <div class="reveal project-entry">
+      <div class="pe-date">Sep 2026 – Present</div>
+      <div>
+        <div class="pe-title">Committee Member</div>
+        <div class="pe-org">Phi Eta Mu – Committee of Medios Electrónicos</div>
+        <ul class="pe-list">
+          <li>Contacted 8 employers to date for the March 2027 career fair (prior fairs: 600–800 attendees, 40+ employers).</li>
+        </ul>
+        <div class="pe-tags"><span>Employer Outreach</span><span>Career Fair</span></div>
+      </div>
+    </div>
+
+    <div class="reveal project-entry">
+      <div class="pe-date">Sep 2026 – Present</div>
+      <div>
+        <div class="pe-title">Consultant</div>
+        <div class="pe-org">Duke Advanced Degree Consulting Club (DACC)</div>
+        <ul class="pe-list">
+          <li>Benchmarked competitors' products, prices, features, geographic reach, and accessory offerings to inform a pro bono client's market positioning (under NDA).</li>
+        </ul>
+        <div class="pe-tags"><span>Market Research</span><span>Competitive Benchmarking</span></div>
+      </div>
+    </div>
+
+    <div class="reveal project-entry">
+      <div class="pe-date">Oct 2026 – Present</div>
+      <div>
+        <div class="pe-title">Ground Systems Member</div>
+        <div class="pe-org">Duke AERO (Rocketry)</div>
+        <div class="pe-tags"><span>Rocketry</span><span>Ground Systems</span></div>
       </div>
     </div>
 
@@ -702,14 +782,19 @@
     </div>
 
     <div class="reveal project-entry">
-      <div class="pe-date">May 2025 – Present</div>
+      <div class="pe-date">May 2025 – Aug 2026</div>
       <div>
         <div class="pe-title">Autonomous Depth Estimation</div>
-        <div class="pe-org">Agricultural Robotics Lab, UCF</div>
-        <p class="pe-desc">A low-cost depth-estimation system for a strawberry-harvesting robot's final approach — no RGB-D camera, no LiDAR, no neural network. Just two RGB cameras, deterministic color-channel processing, and a polynomial model calibrated by minimizing squared error.</p>
-        <div class="pe-stat">0.443 mm RMS accuracy (~1% normalized error) across a 2.5–6.5 cm target range.</div>
-        <div class="pe-pill">Currently co-authoring a research paper on this work for journal and/or conference submission — publication coming soon.</div>
-        <div class="pe-tags"><span>MATLAB</span><span>SolidWorks</span><span>Raspberry Pi</span><span>Dual-Camera RGB Vision</span></div>
+        <div class="pe-org">Agricultural Robotics Lab, UCF · Volunteer Undergraduate Research Assistant</div>
+        <p class="pe-desc">A novel, low-cost depth-estimation system for a strawberry-harvesting robot — no RGB-D camera, no LiDAR, no neural network. Just two consumer RGB webcams, a Raspberry Pi, and deterministic image processing.</p>
+        <div class="pe-stat">~1% error versus measured distance across a 5–25 cm working range.</div>
+        <ul class="pe-list">
+          <li>Designed the real-time MATLAB perception pipeline (weighted RGB decomposition, binary thresholding, morphological operations, kernel smoothing) that extracts each strawberry's full perimeter from a live webcam feed and isolates its bottom-edge contour for depth estimation.</li>
+          <li>Designed modular SolidWorks test fixtures and end-effector mounts so a single failed or revised section could be reprinted alone, saving ~6 hours of print time per reprint versus the ~8.5-hour full set.</li>
+          <li>Presented results weekly to the lab director.</li>
+        </ul>
+        <div class="pe-pill">Primary author of a conference paper on this method, currently in preparation.</div>
+        <div class="pe-tags"><span>MATLAB</span><span>Computer Vision</span><span>Image Processing</span><span>SolidWorks</span><span>Raspberry Pi</span></div>
       </div>
     </div>
 
@@ -724,7 +809,7 @@
     </div>
 
     <div class="research-cta reveal">
-      <p><strong>Full research timeline and lab details</strong> — including the Dr. Sohn group work and ongoing publication — are in the résumé.</p>
+      <p><strong>The condensed version</strong> — research, projects, experience, and leadership on one page — is in the résumé.</p>
       <a href="assets/resume/Kevin_Rivera_Resume_2026.pdf" download="Kevin_Rivera_Resume_2026.pdf" class="btn btn-ghost">Download Résumé ↓</a>
     </div>
 
@@ -737,10 +822,19 @@
     <div class="section-head reveal">
       <div class="eyebrow">Academic Record</div>
       <h2>Coursework</h2>
-      <p>Undergraduate coursework, B.S. Mechanical Engineering, University of Central Florida. Graduate coursework from Duke will be added here separately as it's completed.</p>
+      <p>Graduate coursework, M.Eng. Robotics &amp; Autonomy, Duke University, and undergraduate coursework, B.S. Mechanical Engineering, University of Central Florida.</p>
     </div>
 
     <div class="panel reveal" style="background:#fff; max-width:880px; margin:0 auto; padding:32px 36px;">
+      <div class="course-group">
+        <div class="course-group-label">Graduate — Duke University (In Progress)</div>
+        <div class="course-chips">
+          <span class="course-chip">Linear System Theory &amp; Machine Learning</span>
+          <span class="course-chip"><span class="code">ME 555</span>Continuum Robotics</span>
+          <span class="course-chip">Management in High Tech Industries</span>
+        </div>
+      </div>
+
       <div class="course-group">
         <div class="course-group-label">Math &amp; Statistics</div>
         <div class="course-chips">
@@ -812,13 +906,33 @@
     </div>
     <div class="resume-grid">
       <div class="resume-copy reveal">
-        <p>Everything above, plus the rest — research timeline, leadership, and internship experience — in one PDF. Pulled straight from the source, no editorializing.</p>
-        <a href="assets/resume/Kevin_Rivera_Resume_2026.pdf" download="Kevin_Rivera_Resume_2026.pdf" class="btn btn-primary">Download PDF ↓</a>
+        <p>Two versions: a one-page technical résumé, and a master résumé with the full detail on every role and project.</p>
+        <div class="resume-options">
+          <div class="resume-opt active" data-src="assets/resume/Kevin_Rivera_Resume_2026.pdf" data-label="Technical Résumé">
+            <div class="resume-opt-title">Technical Résumé</div>
+            <div class="resume-opt-meta">Current · 1 page · PDF</div>
+            <div class="doc-actions">
+              <button class="doc-btn primary" onclick="showResume(this)">Viewing</button>
+              <a class="doc-btn" href="assets/resume/Kevin_Rivera_Resume_2026.pdf" download="Kevin_Rivera_Technical_Resume.pdf">Download</a>
+            </div>
+          </div>
+          <div class="resume-opt" data-src="assets/resume/Kevin_Rivera_Master_Resume.pdf" data-label="Master Résumé">
+            <div class="resume-opt-title">Master Résumé</div>
+            <div class="resume-opt-meta">Full detail · 2 pages · PDF</div>
+            <div class="doc-actions">
+              <button class="doc-btn primary" onclick="showResume(this)">View</button>
+              <a class="doc-btn" href="assets/resume/Kevin_Rivera_Master_Resume.pdf" download="Kevin_Rivera_Master_Resume.pdf">Download</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="resume-frame reveal">
+      <div class="reveal">
+        <div class="resume-frame-label" id="resumeLabel">Now showing: Technical Résumé</div>
+        <div class="resume-frame">
         <div class="resume-frame-inner">
           <embed src="assets/resume/Kevin_Rivera_Resume_2026.pdf" type="application/pdf" id="resumeEmbed">
           <div class="resume-fallback" id="resumeFallback">Inline preview isn't available in this view — use the download button to open the full résumé.</div>
+        </div>
         </div>
       </div>
     </div>
@@ -866,6 +980,19 @@
 </footer>
 
 <script>
+  function showResume(btn) {
+    const opt = btn.closest('.resume-opt');
+    document.querySelectorAll('.resume-opt').forEach(o => {
+      o.classList.toggle('active', o === opt);
+      o.querySelector('button').textContent = (o === opt) ? 'Viewing' : 'View';
+    });
+    const old = document.getElementById('resumeEmbed');
+    const fresh = document.createElement('embed');
+    fresh.id = 'resumeEmbed'; fresh.type = 'application/pdf'; fresh.src = opt.dataset.src;
+    fresh.style.display = old.style.display;
+    old.replaceWith(fresh);
+    document.getElementById('resumeLabel').textContent = 'Now showing: ' + opt.dataset.label;
+  }
   function toggleDoc(id, src, type, btn) {
     const panel = document.getElementById('panel-' + id);
     if (!panel) return;
